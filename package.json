@@ -1,0 +1,21 @@
+{
+  "name": "Patreon-Lightbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app",
+    "homepage": "https://patreon-lightbox.herokuapp.com",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jazz Lyles <ripley36706@gmail.com> (https://github.com/existenzial)",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
+    "pushstate-server": "^2.1.0"
+  }
+}
