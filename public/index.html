@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -9,6 +9,8 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Prefetching -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/app.css">
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/public/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/public/icons/apple-icon-60x60.png">
@@ -31,9 +33,20 @@
     <!-- Header -->
     <h1>Patreon Lightbox</h1>
     <!-- Lightbox Modal -->
-    
+    <div id="lightbox-modal" class="modal">
+      <span class="lightbox-close" onclick="closelightbox()">&times;</span>
+      <div class="lightbox-content">
+        <div class="lightbox-gallery-position"> 1 / 4</div>
+        <img src="patreon_logo.png" style="width:100%">
+        <div class="image-info">
+          <p id="image-title">Patreon Logo</p>
+        </div>
+      </div>
+    </div>
     <!-- Image Gallery -->
-    <div class="gallery-container">Image List</div>
+    <div class="gallery-container">
+      <h2>Image Gallery</h2>
+    </div>
     <!-- Footer -->
   </body>
 
