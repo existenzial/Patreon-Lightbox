@@ -1,4 +1,4 @@
-const server = require('pushstate-server');
+var server = require('pushstate-server');
 
 server.start({
   port: process.env.PORT || 3000,
