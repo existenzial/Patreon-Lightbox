@@ -2,7 +2,7 @@
   "name": "Patreon-Lightbox",
   "version": "1.0.0",
   "private": true,
-  "description": "",
+  "description": "a photo lightbox created with vanilla js, HTML and CSS for the Patreon take home application",
   "main": "app.js",
   "scripts": {
     "start": "node app",
