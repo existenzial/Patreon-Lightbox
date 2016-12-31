@@ -1,4 +1,4 @@
-var Image = function() {
+var Image = function(image) {
   this.title = image.title;
   this.mediaUrl = image.mediaUrl;
 };
@@ -16,5 +16,3 @@ Image.prototype.setMediaUrl = function(image) {
 Image.prototype.getMediaUrl = function(image) {
   return image.mediaUrl;
 };
-
-exports = Image;
