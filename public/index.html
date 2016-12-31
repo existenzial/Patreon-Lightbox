@@ -2,57 +2,140 @@
 <html lang="en">
   <head>
     <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="keywords" content="lightbox, html5, html, photo, patreon, javascript, js, css" />
     <meta name="description" content="A photo lightbox made with vanilla JavaScript, CSS and HTML for Patreon" />
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff">
     <!-- Prefetching -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//api.flickr.com/' />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="stylesheets/app.css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <!-- Icons -->
     <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="manifest" href="/icons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
     <title>Patreon Lightbox</title>
   </head>
 
   <body>
     <!-- Header -->
-    <h1>Patreon Lightbox</h1>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="modal">
-      <span class="lightbox-close" onclick="closelightbox()">&times;</span>
-      <div class="lightbox-content">
-        <div class="lightbox-gallery-position"> 1 / 4</div>
-        <img src="patreon_logo.png" style="width:100%" alt="Patreon Logo">
-        <div class="image-info">
-          <p id="image-title">Patreon Logo</p>
+    <div id="header" class="row"></div>
+
+    <!-- Lightbox MODAL - START -->
+    <div id="lightbox" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <!-- Lightbox MODAL - CONTENT START -->
+      <div class="modal-content">
+        <div class="slide">
+          <div class="lightbox-position">1 / 5</div>
+          <img src="test_images/img1.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <div class="lightbox-position">2 / 5</div>
+          <img src="test_images/img2.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <div class="lightbox-position">3 / 5</div>
+          <img src="test_images/img3.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <div class="lightbox-position">4 / 5</div>
+          <img src="test_images/img4.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <div class="lightbox-position">5 / 5</div>
+          <img src="test_images/img5.jpg" style="width:100%">
+        </div>
+
+        <!-- PREV / NEXT BUTTONS -->
+        <a class="prev" onclick="slideshowMove(-1)">&#10094;</a>
+        <a class="next" onclick="slideshowMove(1)">&#10095;</a>
+
+        <!-- IMAGE - TITLE -->
+        <div class="slide-title-container">
+          <p id="slide-title"></p>
+        </div>
+
+        <div class="column">
+          <img class="dot" src="test_images/img1.jpg" onclick="setCurrentSlide(1)" alt="Image # 1">
+        </div>
+
+        <div class="column">
+          <img class="dot" src="test_images/img2.jpg" onclick="setCurrentSlide(2)" alt="Image # 2">
+        </div>
+
+        <div class="column">
+          <img class="dot" src="test_images/img3.jpg" onclick="setCurrentSlide(3)" alt="Image # 3">
+        </div>
+
+        <div class="column">
+          <img class="dot" src="test_images/img4.jpg" onclick="setCurrentSlide(4)" alt="Image # 4">
+        </div>
+
+        <div class="column">
+          <img class="dot" src="test_images/img5.jpg" onclick="setCurrentSlide(5)" alt="Image # 5">
         </div>
       </div>
+      <!-- Lightbox MODAL - CONTENT END -->
     </div>
-    <!-- Image Gallery -->
-    <div class="gallery-container">
-      <h2>Image Gallery</h2>
-    </div>
-    <!-- Footer -->
-  </body>
+    <!-- Lightbox MODAL - END -->
 
+    <!-- Search -->
+    <div class="row">
+      <div class="search">
+        <form id="search" action="POST">
+          <input id="search-term" type="text" name="search-term" placeholder="Search...">
+          <input id="search-submit" type="submit" name="load-gallery" value="Load Gallery" onclick="handleSearch">
+        </form>
+      </div>
+    </div>
+
+    <!-- Gallery: Outer - START -->
+    <div id="gallery-outer">
+      <!-- Gallery: Inner - START -->
+      <div id="gallery-inner" class="gallery">
+        <div class="row">
+          <h2 id="gallery-title">Image Gallery</h2>
+        </div>
+
+        <div id="gallery-thumbnails" class="row"></div>
+      </div>
+      <!-- Gallery: Inner - END -->
+    </div>
+    <!-- Gallery: Outer - END -->
+
+    <!-- Footer -->
+    <div id="footer" class="row"></div>
+
+    <!-- Scripts -->
+    <script src="src/actions/galleryActions.js"></script>
+    <script src="src/API/api.js"></script>
+    <script src="src/models/Image.js"></script>
+    <script src="src/common/Header.js"></script>
+    <script src="src/common/Footer.js"></script>
+    <script src="src/actions/searchActions.js"></script>
+    <script src="src/components/GalleryView.js"></script>
+  </body>
 </html>
