@@ -8,7 +8,7 @@ function handleSearch(e) {
 
 function fetchSearchFromFlickr (searchTerm) {
   searchTerm = document.getElementById("search-term").value;
-  console.log(`Searched Flickr for: ${searchTerm}`);
+  // console.log(`Searched Flickr for: ${searchTerm}`);
   if (searchTerm !== null) {
     getFlickrImages(searchTerm);
     searchTerm = "";
