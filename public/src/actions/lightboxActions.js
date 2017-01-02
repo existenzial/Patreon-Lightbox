@@ -7,6 +7,12 @@ function closeLightbox() {
 var lightboxClose = document.getElementById("lightbox-close");
     lightboxClose.addEventListener("click", closeLightbox, false);
 
+// LIGHTBOX - PREV / NEXT - EVENT LISTENERS - ADD
+var previous = document.getElementById("lightbox-previous");
+    previous.addEventListener("click", slideshowPrevious, false);
+var next = document.getElementById("lightbox-next");
+    next.addEventListener("click", slideshowNext, false);
+
 var slideIndex = 1;
 
 // LIGHTBOX - SLIDE PREVIOUS - ACTION
@@ -43,6 +49,5 @@ function showLightboxSlides(idx) {
     slides[i].style.display = "none";
     console.log("Slide # " + (i + 1) + " set to display: none");
   }
-
   slides[slideIndex - 1].style.display = "block";
 }
