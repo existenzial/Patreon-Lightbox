@@ -28,8 +28,3 @@ var Search = function() {
 
 Search();
 console.log("Search Loaded");
-
-/* SEARCH - ACTION */
-function handleSearch() {
-  //TODO: handle API search with user-input
-}
