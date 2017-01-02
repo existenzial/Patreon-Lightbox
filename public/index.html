@@ -45,34 +45,25 @@
       <!-- Lightbox MODAL - CONTENT START -->
       <div id="lightbox-content" class="modal-content">
 
-        <!-- <div id="slide[i]" class="slide">
-          <div class="lightbox-position">slide[i] &nbsp;/&nbsp; images.length</div>
-          <img src="test_images/img2.jpg" style="width:100%" alt="image.title">
-        </div> -->
-
         <!-- PREV / NEXT BUTTONS -->
         <a class="previous" onclick="slideshowMove(-1)">&#9664;</a>
         <a class="next" onclick="slideshowMove(1)">&#9654;</a>
 
-        <!-- Lightbox - IMAGE TITLE -->
+        <!-- Lightbox - THUMBNAILS -->
+        <div id="lightbox-thumbnails" class="row"></div>
+
+        <!-- Lightbox - SLIDE TITLE CONTAINER -->
         <div class="slide-title-container">
+          <!-- Lightbox - SLIDE TITLE -->
           <p id="slide-title"></p>
         </div>
-
-        <!-- Lightbox - THUMBNAILS -->
-        <div id="lightbox-thumbnails" class="row">
-          <!-- <div class="col">
-            <img class="lightbox-thumbnail" src="test_images/img2.jpg" onclick="setCurrentSlide(4)" alt="image.title">
-          </div> -->
-      </div>
-
       </div>
       <!-- Lightbox MODAL - CONTENT END -->
     </div>
     <!-- Lightbox MODAL - END -->
 
     <!-- Search -->
-    <div class="row">
+    <div id="search-container" class="row">
       <div class="search">
         <form id="search" action="POST">
           <input id="search-term" type="text" name="search-term" placeholder="Search...">
@@ -99,12 +90,21 @@
     <div id="footer" class="row"></div>
 
     <!-- Scripts -->
-    <script src="src/API/api.js"></script>
-    <script src="src/actions/galleryActions.js"></script>
+    <!-- Models -->
     <script src="src/models/Image.js"></script>
-    <script src="src/common/Header.js"></script>
-    <script src="src/common/Footer.js"></script>
+    <!-- Utils -->
+    <script src="src/utils/galleryUtils.js"></script>
+    <script src="src/utils/lightboxUtils.js"></script>
+    <!-- APIs -->
+    <script src="src/API/api.js"></script>
+    <!-- Actions -->
+    <script src="src/actions/galleryActions.js"></script>
     <script src="src/actions/searchActions.js"></script>
+    <!-- Components: Common -->
+    <script src="src/common/Header.js"></script>
+    <script src="src/common/Search.js"></script>
+    <script src="src/common/Footer.js"></script>
+    <!-- Components: Specific Views -->
     <script src="src/components/GalleryView.js"></script>
   </body>
 </html>
