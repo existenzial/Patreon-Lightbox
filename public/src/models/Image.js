@@ -1,18 +1,10 @@
-var Image = function(image) {
-  this.title = image.title;
-  this.mediaUrl = image.mediaUrl;
+var Image = function(farm, server, id, secret, title) {
+  this.farm = farm;
+  this.server = server;
+  this.id = id;
+  this.secret = secret;
+  this.title = title;
+  this.mediaUrl = "https://farm" + this.farm + ".staticflickr.com/" + this.server + "/" + this.id + "_" + this.secret + ".jpg"
 };
 
-Image.constructor = Image;
-Image.prototype.setTitle = function(image) {
-  this.title = image.title;
-};
-Image.prototype.getTitle = function(image) {
-  return image.title;
-};
-Image.prototype.setMediaUrl = function(image) {
-  this.mediaUrl = image.mediaUrl;
-};
-Image.prototype.getMediaUrl = function(image) {
-  return image.mediaUrl;
-};
+Image.prototype.constructor = Image;
