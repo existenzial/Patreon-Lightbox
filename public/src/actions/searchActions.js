@@ -1,13 +1,13 @@
 function handleSearch(e) {
-  e.preventDefault();
-
   var searchSubmit = document.getElementById("search-submit");
       searchSubmit.addEventListener("submit", fetchSearchFromFlickr, false);
+
+  e.preventDefault();
 }
 
 function fetchSearchFromFlickr (searchTerm) {
+  // console.log(`Searching API for: ${searchTerm}`);
   searchTerm = document.getElementById("search-term").value;
-  // console.log(`Searched Flickr for: ${searchTerm}`);
   if (searchTerm !== null) {
     getFlickrImages(searchTerm);
     searchTerm = "";
