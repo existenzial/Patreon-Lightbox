@@ -66,8 +66,11 @@ function getFlickrImages(searchTerm) {
         slide.appendChild(slideTitle);
         slide.appendChild(slideImage);
 
-        lightboxContent.appendChild(slide);
+        lightboxContent.appendChild(slide);        
       }
+      // SLIDESHOW - SET CURRENT SLIDE w/FIRST SLIDE
+      var slideIndex = 1;
+      showLightboxSlides(slideIndex);
 
       return images; // Image - Collection
     }).catch( err => {
