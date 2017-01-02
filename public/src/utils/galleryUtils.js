@@ -1,20 +1,25 @@
-/* GALLERY - UTILS */
+/* GALLERY - DOM UTILS */
+
+// GALLERY - THUMBNAIL - CREATE
 function createGalleryThumbnailImage() {
   var galleryImage = document.createElement("img");
 
   return galleryImage;
 }
 
+// GALLERY - THUMBNAIL - LIST ITEM - CREATE
 function createGalleryThumbnailListItem() {
   var galleryListItem = document.createElement("li");
 
   return galleryListItem;
 }
 
+// GALLERY - THUMBNAIL - EVENT LISTENERS - ADD
 function addGalleryThumbnailListeners(image) {
-  image.addEventListener("click", openModal, false);
+  image.addEventListener("click", openLightbox, false);
 }
 
+// GALLERY - THUMBNAIL - ATTRIBUTES - ADD
 function setGalleryThumbnailDefaultAttributes(image, id, title, src) {
   image.id = id; // Thumbnail - Key
   image.className = "gallery-thumbnail"; // Thumbnail - Class
