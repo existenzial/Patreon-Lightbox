@@ -119,6 +119,7 @@ h2 {
 /***** GALLERY *****/
 /* All */
 #gallery-outer {
+  margin-bottom: 20%;
   text-align: center;
 }
 
@@ -133,8 +134,8 @@ h2 {
 
 /* Thumbnails */
 #gallery-thumbnail-container {
-  margin: 0;
-  left: 0;
+  margin/: auto;
+  /* left: 0; */
 
   width: 100%;
   max-width: 100%;
@@ -197,6 +198,11 @@ img[data-src] {
   background-color: rgba(0, 0, 0, 0.8);
 
   transition: all .3s cubic-bezier(.10, .10, .25, .90);
+}
+
+#lightbox-content {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Slide */
@@ -312,7 +318,8 @@ img[data-src] {
 @media screen and (max-width: 480px){
   .navbar {
     text-align: center;
-    max-height: 8%;
+    height: 75px;
+    max-height: 15%;
   }
   #header-logo {
     max-width: 8%;
@@ -321,6 +328,19 @@ img[data-src] {
   h1 {
     margin: 5%;
     font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+
+  #search-term {
+    margin-bottom: 2.5%;
+    min-width: 75%;
+    max-width: 75%;
+  }
+  #search-submit {
+    min-width: 75%;
+    max-width: 75%;
   }
 }
 
