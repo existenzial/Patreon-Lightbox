@@ -53,4 +53,4 @@ function lazyLoadGalleryImage(img) {
       img.removeAttribute('data-src');
     };
   });
-};
+}
