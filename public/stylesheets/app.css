@@ -132,7 +132,13 @@ h2 {
 }
 
 /* Thumbnails */
-#gallery-container {}
+#gallery-thumbnail-container {
+  margin: 0;
+  left: 0;
+
+  width: 100%;
+  max-width: 100%;
+}
 
 li {
   display: inline;
