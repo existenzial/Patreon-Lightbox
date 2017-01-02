@@ -38,6 +38,7 @@ function getFlickrImages(searchTerm) {
         //console.log(image.id + " - " + image.title + " - " + image.mediaUrl);
 
         // API Success - Set Gallery
+        var galleryThumbnailContainer = document.getElementById("gallery-thumbnail-container");
         var galleryThumbnails = document.getElementById("gallery-thumbnails");
 
         var galleryImage = createGalleryThumbnailImage();
@@ -49,6 +50,7 @@ function getFlickrImages(searchTerm) {
 
         galleryListItem.appendChild(galleryImage);
         galleryThumbnails.appendChild(galleryListItem);
+        galleryThumbnailContainer.appendChild(galleryThumbnails);
 
         // API Success - Set Lightbox Slide
         var lightboxContent = document.getElementById("lightbox-content");
@@ -66,7 +68,7 @@ function getFlickrImages(searchTerm) {
         slide.appendChild(slideTitle);
         slide.appendChild(slideImage);
 
-        lightboxContent.appendChild(slide);        
+        lightboxContent.appendChild(slide);
       }
       // SLIDESHOW - SET CURRENT SLIDE w/FIRST SLIDE
       var slideIndex = 1;
