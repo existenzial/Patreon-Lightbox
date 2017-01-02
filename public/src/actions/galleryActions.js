@@ -8,42 +8,38 @@ function closeModal() {
   document.getElementById('lightbox').style.display = "none";
 }
 
-// SLIDESHOW - SET CURRENT SLIDE w/FIRST SLIDE
 var slideIndex = 1;
-showLightboxSlides(slideIndex);
 
-function slideshowMove(n) {
-  showLightboxSlides(slideIndex += n);
+function slideshowMove(idx) {
+  showLightboxSlides(slideIndex += idx);
 }
 
 // SLIDESHOW - SET CURRENT SLIDE
-function setCurrentSlide(n) {
-  showLightboxSlides(slideIndex = n);
+function setCurrentSlide(idx) {
+  showLightboxSlides(slideIndex = idx);
 }
 
 // SLIDESHOW - SHOW SLIDES
-function showLightboxSlides(n) {
+function showLightboxSlides(idx) {
   var i;
-  var slides = document.getElementsByClassName("gallery-thumbnail");
-  var thumbnails = document.getElementsByClassName("lightbox-thumbnail");
-  var slideTitleText = document.getElementById("slide-title");
+  var slides = document.getElementsByClassName("slide");
+
+  // API Promise Debug
+  // if (slides.length) { console.log("You have slides!"); }
+  // else { console.log("No slides for you!"); }
+
   // slideshow end - go back to the beginning
-  if (n > slides.length) { slideIndex = 1; }
+  if (idx > slides.length) { slideIndex = 1; }
   // slideshow err - go to end
-  if (n < 1) { slideIndex = slides.length; }
+  if (idx < 1) { slideIndex = slides.length; }
+
   // iterate through slides & set display to none
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-  }
-  // iterate through thumbnails, replace "active" class with ""
-  for (i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].className = thumbnails[i].className.replace(" active", "");
+    console.log("Slide # " + i + " set to display: none");
   }
 
-  slides[slideIndex-1].style.display = "block";
-  thumbnails[slideIndex-1].className += " active";
-  // change caption text to title of current slide
-  slideTitleText.innerHTML = thumbnails[slideIndex - 1].alt;
+  slides[slideIndex - 1].style.display = "block";
 }
 
 function lazyLoadGalleryImage(img) {
