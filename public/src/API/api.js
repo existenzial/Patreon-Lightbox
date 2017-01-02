@@ -35,7 +35,6 @@ function getFlickrImages(searchTerm) {
         // Grid - Col
         var col = document.createElement("div");
             col.className = "col";
-        //console.log(image.id + " - " + image.title + " - " + image.mediaUrl);
 
         // API Success - Set Gallery
         var galleryThumbnailContainer = document.getElementById("gallery-thumbnail-container");
@@ -48,6 +47,7 @@ function getFlickrImages(searchTerm) {
 
         var galleryListItem = createGalleryThumbnailListItem();
 
+        col.appendChild(galleryListItem);
         galleryListItem.appendChild(galleryImage);
         galleryThumbnails.appendChild(galleryListItem);
         galleryThumbnailContainer.appendChild(galleryThumbnails);
@@ -69,6 +69,7 @@ function getFlickrImages(searchTerm) {
         slide.appendChild(slideImage);
 
         lightboxContent.appendChild(slide);
+
       }
       // SLIDESHOW - SET CURRENT SLIDE w/FIRST SLIDE
       var slideIndex = 1;
