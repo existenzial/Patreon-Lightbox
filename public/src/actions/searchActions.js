@@ -1,15 +1,18 @@
-function handleSearch(e) {
-  var searchSubmit = document.getElementById("search-submit");
-      searchSubmit.addEventListener("submit", fetchSearchFromFlickr, false);
+var searchForm = document.getElementById("search");
+    searchForm.addEventListener("submit", stopRefresh);
+    searchForm.addEventListener("click", stopRefresh);
+var searchTerm = document.getElementById("search-term");
+    searchTerm.addEventListener("change", handleSearch);
 
+function stopRefresh(e) {
   e.preventDefault();
+  return false;
 }
 
-function fetchSearchFromFlickr (searchTerm) {
-  // console.log(`Searching API for: ${searchTerm}`);
-  searchTerm = document.getElementById("search-term").value;
-  if (searchTerm !== null) {
-    getFlickrImages(searchTerm);
-    searchTerm = "";
-  }
+function handleSearch(e) {
+  e.preventDefault();
+  console.log("search Test triggered!!!!!");
+  console.log(`Searching API for: ${this.value}`);
+
+  getFlickrImages(this.value);
 }
