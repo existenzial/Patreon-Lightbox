@@ -16,7 +16,7 @@
     <link async rel="stylesheet" href="stylesheets/app.css" >
     <link async rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <!-- Icons -->
-    <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
@@ -40,20 +40,20 @@
 
     <!-- Lightbox MODAL - START -->
     <div id="lightbox" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <span id="lightbox-close" class="close">&times;</span>
 
       <!-- Lightbox MODAL - CONTENT START -->
       <div id="lightbox-content" class="modal-content">
 
-        <!-- PREV / NEXT BUTTONS -->
-        <a class="previous" onclick="slideshowMove(-1)">&#9664;</a>
-        <a class="next" onclick="slideshowMove(1)">&#9654;</a>
+        <!-- Lightbox - PREV / NEXT BUTTONS -->
+        <a id="lightbox-previous" class="previous">&#9664;</a>
+        <a id="lightbox-next" class="next">&#9654;</a>
 
         <!-- Lightbox - THUMBNAILS -->
         <div id="lightbox-thumbnails" class="row"></div>
 
         <!-- Lightbox - SLIDE TITLE CONTAINER -->
-        <div class="slide-title-container">
+        <div id="slide-title-container" class="row">
           <!-- Lightbox - SLIDE TITLE -->
           <p id="slide-title"></p>
         </div>
@@ -67,7 +67,7 @@
       <div class="search">
         <form id="search" action="POST">
           <input id="search-term" type="text" name="search-term" placeholder="Search...">
-          <input id="search-submit" type="submit" name="load-gallery" value="Load Gallery" onclick="handleSearch">
+          <!-- <input id="search-submit" type="submit" name="load-gallery" value="Load Gallery"> -->
         </form>
       </div>
     </div>
@@ -79,7 +79,6 @@
         <div class="row">
           <h2 id="gallery-title">Image Gallery</h2>
         </div>
-
         <div id="gallery-thumbnail-container" class="row"></div>
       </div>
       <!-- Gallery: Inner - END -->
@@ -92,19 +91,20 @@
     <!-- Scripts -->
     <!-- Models -->
     <script src="src/models/Image.js"></script>
+    <!-- APIs -->
+    <script src="src/API/api.js"></script>
     <!-- Actions -->
     <script src="src/actions/galleryActions.js"></script>
+    <script src="src/actions/lightboxActions.js"></script>
     <script src="src/actions/searchActions.js"></script>
     <!-- Utils -->
     <script src="src/utils/galleryUtils.js"></script>
     <script src="src/utils/lightboxUtils.js"></script>
-    <!-- APIs -->
-    <script src="src/API/api.js"></script>
     <!-- Components: Common -->
     <script src="src/common/Header.js"></script>
     <script src="src/common/Search.js"></script>
     <script src="src/common/Footer.js"></script>
-    <!-- Components: Specific Views -->
+    <!-- Components: Views -->
     <script src="src/components/GalleryView.js"></script>
   </body>
 </html>
