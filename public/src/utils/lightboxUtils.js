@@ -13,7 +13,7 @@ function createLightboxSlideTitle(image) {
       slideTitle.innerHTML = image.title;
 
   return slideTitle;
-};
+}
 
 function createLightboxSlideImage(image) {
   var slideImage = document.createElement("img");
@@ -22,4 +22,4 @@ function createLightboxSlideImage(image) {
       slideImage.style.width = "100%";
 
   return slideImage;
-};
+}

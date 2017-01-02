@@ -56,7 +56,7 @@ function getFlickrImages(searchTerm) {
         var lightboxPosition = document.createElement("div");
             lightboxPosition.id = i + 1;
             lightboxPosition.className = "slide-position";
-            lightboxPosition.innerHTML = lightboxPosition.id + "&nbsp;" + "/" + "&nbsp;" + images.length;
+            lightboxPosition.innerHTML = lightboxPosition.id + "&nbsp;/&nbsp;" + images.length;
             lightboxPosition.style.color = "lightgrey";
 
         var slideTitle = createLightboxSlideTitle(image);
@@ -73,4 +73,4 @@ function getFlickrImages(searchTerm) {
     }).catch( err => {
       throw new Error("There was trouble mapping the Flickr photo data:" + err);
     });
-};
+}

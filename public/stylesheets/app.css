@@ -62,11 +62,11 @@ h2 {
 #header-title {
   text-align: center;
 
-  transform: translateX(-7%);
-  -o-transform: translateX(-7%);
-  -ms-transform: translateX(-7%);
-  -moz-transform: translateX(-7%);
   -webkit-transform: translateX(-7%);
+  -moz-transform: translateX(-7%);
+  -ms-transform: translateX(-7%);
+  -o-transform: translateX(-7%);
+  transform: translateX(-7%);
 }
 
 /***** SEARCH *****/
@@ -99,11 +99,11 @@ h2 {
   border-bottom: 1px solid lightgrey;
   background-color: #e54a1f;
 
-  transition: all .5s cubic-bezier(.10, .10, .25, .90);
-  -o-transition: all .5s cubic-bezier(.10, .10, .25, .90);
-  -ms-transition: all .5s cubic-bezier(.10, .10, .25, .90);
-  -moz-transition: all .5s cubic-bezier(.10, .10, .25, .90);
   -webkit-transition: all .5s cubic-bezier(.10, .10, .25, .90);
+  -moz-transition: all .5s cubic-bezier(.10, .10, .25, .90);
+  -ms-transition: all .5s cubic-bezier(.10, .10, .25, .90);
+  -o-transition: all .5s cubic-bezier(.10, .10, .25, .90);
+  transition: all .5s cubic-bezier(.10, .10, .25, .90);
 }
 #search-submit:hover {
   cursor: pointer;

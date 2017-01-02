@@ -2,9 +2,8 @@ function handleSearch(e) {
   e.preventDefault();
 
   var searchSubmit = document.getElementById("search-submit");
-
-  searchSubmit.addEventListener("submit", fetchSearchFromFlickr, false);
-};
+      searchSubmit.addEventListener("submit", fetchSearchFromFlickr, false);
+}
 
 function fetchSearchFromFlickr (searchTerm) {
   searchTerm = document.getElementById("search-term").value;
@@ -13,4 +12,4 @@ function fetchSearchFromFlickr (searchTerm) {
     getFlickrImages(searchTerm);
     searchTerm = "";
   }
-};
+}
