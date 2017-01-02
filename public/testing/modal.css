@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+}
+
+/* Modal Overlay Bg Applied in :before Pseudo-Element to Entire Modal Class */
+.modal:before {
+  display: none; /* initial display */
+  content: "";
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100%; /* cover available screen height */
+  width: 100%; /* cover available screen width */
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Applies to Modal :target:before (#lightbox) - Block Display of Black .modal:before Bg */
+.modal:target:before {
+  display: block;
+}
+
+/* Applies to Modal :target id (#lightbox) - Transform Container Into View */
+.modal:target .modal-container {
+  top: 30%; /* position modal */
+
+  transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+
+  transition: transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -ms-transition: -ms-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+}
+
+.modal-container {
+  position: fixed;
+  left: 50%;
+  text-align: center; /* Centers Images */
+
+  padding: 20px;
+  border-radius: 5px;
+
+  width: 70%;
+  max-width: 400px;
+
+  background-color: white;
+  /* border: 1px solid orange; */
+
+  /* To Completely Center Modal, use X-axis Offset Translation */
+  /* Y-axis Offset Places Modal Out of View on Top */
+  transform: translate(-50%, -200%);
+  -o-transform: translate(-50%, -200%);
+  -ms-transform: translate(-50%, -200%);
+  -moz-transform: translate(-50%, -200%);
+  -webkit-transform: translate(-50%, -200%);
+}
+
+.modal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding-bottom: 10%;
+  /* border-radius: 5px; */
+
+  width: 100%;
+
+  /* background-color: lightgrey; */
+}
+
+#modal-close {}
+
+.close {
+  position: absolute;
+  right: 7%;
+}
