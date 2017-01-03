@@ -8,7 +8,7 @@ var Footer = function() {
 
   var footerContent = document.createElement("p");
       footerContent.id = "footer-text";
-      footerContent.innerHTML = "&copy &nbsp; Jazz Lyles, &nbsp; 2016 &nbsp; 𐊷";
+      footerContent.innerHTML = "&copy &nbsp; Jazz Lyles, &nbsp; 2016";
 
   footerInnerWrapper.appendChild(footerContent);
   footerOuterWrapper.appendChild(footerInnerWrapper);
