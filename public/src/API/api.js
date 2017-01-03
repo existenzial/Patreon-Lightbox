@@ -56,9 +56,9 @@ function getFlickrImages(searchTerm) {
         var slideTitle = createLightboxSlideTitle(image);
         var slideImage = createLightboxSlideImage(image);
 
-        slide.appendChild(lightboxPosition);
-        slide.appendChild(slideTitle);
         slide.appendChild(slideImage);
+        slide.appendChild(slideTitle);
+        slide.appendChild(lightboxPosition);
 
         lightboxContent.appendChild(slide);
 
