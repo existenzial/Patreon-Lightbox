@@ -13,7 +13,6 @@ function getFlickrImages(searchTerm) {
       // Image - Collection (from API)
       var images = json.photos.photo.map( function(farm, server, id, secret, title) {
         // Image - Model
-        // var image = new Image(farm, server, id, secret, title);
         var image = {
           farm: farm.farm,
           server: farm.server,
@@ -31,6 +30,7 @@ function getFlickrImages(searchTerm) {
       // Image - Collection iteration
       for (let i = 0; i < images.length; i++) {
         var image = images[i];
+        var slideIdx = (i + 1);
 
         // Grid - Col
         var col = document.createElement("div");
@@ -38,12 +38,12 @@ function getFlickrImages(searchTerm) {
 
         // API Success - Set Gallery
         var galleryThumbnailContainer = document.getElementById("gallery-thumbnail-container");
-        var galleryThumbnails = document.getElementById("gallery-thumbnails");
+        var galleryThumbnails = document.getElementById("gallery-thumbnails"); //ul
 
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
             lazyLoadGalleryImage(galleryImage);
-            addGalleryThumbnailListeners(galleryImage);
+            addGalleryThumbnailListeners(galleryImage, slideIdx);
 
         var galleryListItem = createGalleryThumbnailListItem();
 
