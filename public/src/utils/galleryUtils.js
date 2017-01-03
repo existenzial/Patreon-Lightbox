@@ -1,4 +1,5 @@
 /* GALLERY - DOM UTILS */
+var galleryThumbnails = document.getElementsByClassName("gallery-thumbnail");
 
 // GALLERY - THUMBNAIL - CREATE
 function createGalleryThumbnailImage() {
@@ -15,8 +16,9 @@ function createGalleryThumbnailListItem() {
 }
 
 // GALLERY - THUMBNAIL - EVENT LISTENERS - ADD
-function addGalleryThumbnailListeners(image) {
+function addGalleryThumbnailListeners(image, i) {
   image.addEventListener("click", openLightbox, false);
+  image.addEventListener("click", function() { setCurrentSlide(i) });
 }
 
 // GALLERY - THUMBNAIL - ATTRIBUTES - ADD
