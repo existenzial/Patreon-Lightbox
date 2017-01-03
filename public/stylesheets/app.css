@@ -6,10 +6,6 @@ body {
 }
 
 /* Grid System */
-.row > .col {
-  padding: 0 6px;
-}
-
 .row {
   display: block;
   max-width: 100%;
