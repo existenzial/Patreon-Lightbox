@@ -3,7 +3,7 @@
 // LIGHTBOX - SLIDE - CREATE
 function createLightboxSlide(i) {
   var slide = document.createElement("div");
-      slide.id = "slide" + (i + 1);
+      slide.id = (i + 1); //"slide" +
       slide.className = "slide";
 
   return slide;
