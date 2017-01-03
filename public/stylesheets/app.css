@@ -184,13 +184,16 @@ img[data-src] {
 
 /* Slide */
 .slide-img {
+  top: 50%;
+  left: 50%
   max-width: 50%;
 }
 .slide-position {
   float: left;
-  text-align: right;
+  text-align: center;
 
-  margin-left: 5%;
+  margin-left: 7%;
+  margin-top: 3%;
   padding: 1%;
 }
 .slide-title {
@@ -198,7 +201,7 @@ img[data-src] {
   display: inline-block;
   float: right;
 
-  margin-right: 5%;
+  margin-right: 7%;
   padding-right: 1%;
   margin-bottom: 1%;
 
@@ -335,12 +338,12 @@ img[data-src] {
   }
 
   #lightbox-previous {
-    top: 62%;
+    top: 57%;
     left: 5%;
   }
 
   #lightbox-next {
-    top: 63%;
+    top: 57%;
     right: 5%;
   }
 
