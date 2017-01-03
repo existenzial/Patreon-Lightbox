@@ -344,9 +344,6 @@ img[data-src] {
   }
 
   .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 3%;
   }
 }
