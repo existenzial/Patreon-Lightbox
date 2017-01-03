@@ -11,8 +11,10 @@ function stopRefresh(e) {
 
 function handleSearch(e) {
   e.preventDefault();
-  console.log("search Test triggered!!!!!");
-  console.log(`Searching API for: ${this.value}`);
 
-  getFlickrImages(this.value);
+  console.log("search Test triggered!!!!!");
+  console.log(`Searching API for: ${this.value.toLowerCase()}`);
+
+  getFlickrImages(this.value.toLowerCase()); //standardize input to lowercase
+
 }
