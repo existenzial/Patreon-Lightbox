@@ -47,7 +47,6 @@ function showLightboxSlides(idx) {
   // iterate through slides & set display to none
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    console.log("Slide # " + (i + 1) + " set to display: none");
   }
   slides[slideIndex - 1].style.display = "block";
 }
