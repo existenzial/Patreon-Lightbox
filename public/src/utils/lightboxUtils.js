@@ -5,7 +5,7 @@ function createLightboxSlide(i) {
   var slide = document.createElement("div");
       slide.id = (i + 1); //"slide" +
       slide.className = "slide";
-
+  console.log(i + " : Slide container div created!");
   return slide;
 }
 
@@ -14,16 +14,17 @@ function createLightboxSlideTitle(image) {
   var slideTitle = document.createElement("p");
       slideTitle.className = "slide-title";
       slideTitle.innerHTML = image.title;
-
+  console.log("Slide title created!");
   return slideTitle;
 }
 
 // LIGHTBOX - SLIDE - IMAGE - CREATE
 function createLightboxSlideImage(image) {
   var slideImage = document.createElement("img");
+      slideImage.id = image.id;
+      slideImage.className = "slide-image";
       slideImage.src = image.mediaUrl;
       slideImage.setAttribute("alt", image.title);
-      slideImage.style.width = "100%";
-
+  console.log("Slide image created!");
   return slideImage;
 }

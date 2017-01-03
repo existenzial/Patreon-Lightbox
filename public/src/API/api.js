@@ -23,22 +23,15 @@ function getFlickrImages(searchTerm) {
         return image; // Image - Model
       });
 
-      // Grid - Row
-      var row = document.createElement("div");
-          row.className = "row";
-
       // Image - Collection iteration
       for (let i = 0; i < images.length; i++) {
         var image = images[i];
         var slideIdx = (i + 1);
 
-        // Grid - Col
-        var col = document.createElement("div");
-            col.className = "col";
-
         // API Success - Set Gallery
-        var galleryThumbnailContainer = document.getElementById("gallery-thumbnail-container");
+        var galleryInner = document.getElementById("gallery-inner"); //div
         var galleryThumbnails = document.getElementById("gallery-thumbnails"); //ul
+            galleryThumbnails.className = "row";
 
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
@@ -47,14 +40,13 @@ function getFlickrImages(searchTerm) {
 
         var galleryListItem = createGalleryThumbnailListItem();
 
-        col.appendChild(galleryListItem);
         galleryListItem.appendChild(galleryImage);
         galleryThumbnails.appendChild(galleryListItem);
-        galleryThumbnailContainer.appendChild(galleryThumbnails);
+        galleryInner.appendChild(galleryThumbnails);
 
         // API Success - Set Lightbox Slide
         var lightboxContent = document.getElementById("lightbox-content");
-        var slide = createLightboxSlide();
+        var slide = createLightboxSlide(i);
         var lightboxPosition = document.createElement("div");
             lightboxPosition.id = i + 1;
             lightboxPosition.className = "slide-position";

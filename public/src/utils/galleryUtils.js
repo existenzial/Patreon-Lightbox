@@ -11,6 +11,7 @@ function createGalleryThumbnailImage() {
 // GALLERY - THUMBNAIL - LIST ITEM - CREATE
 function createGalleryThumbnailListItem() {
   var galleryListItem = document.createElement("li");
+      galleryListItem.className = "col gallery-item";
 
   return galleryListItem;
 }
