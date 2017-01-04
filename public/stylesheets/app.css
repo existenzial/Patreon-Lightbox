@@ -315,9 +315,12 @@ img[data-src] {
   .navbar {
     text-align: center;
     height: 75px;
+    line-height: 15px;
     max-height: 15%;
   }
   #header-logo {
+    margin-top: 5px;
+    margin-left: 10px;
     max-width: 8%;
   }
   /* GALLERY */
@@ -371,6 +374,12 @@ img[data-src] {
 
 /* Mobile - Medium - 8 Column Layout */
 @media screen and (min-width: 480px) and (max-width: 840px){
+  /* Header */
+  #header-logo {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 8%;
+  }
   /* GALLERY */
   #gallery-thumbnails.row {
     padding-bottom: 20%;
@@ -386,4 +395,11 @@ img[data-src] {
 }
 
 /* Mobile - Large - 12 Column Layout */
-@media screen and (min-width: 840px){}
+@media screen and (min-width: 840px){
+  /* Header */
+  #header-logo {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 8%;
+  }
+}
