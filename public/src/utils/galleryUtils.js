@@ -23,11 +23,21 @@ function addGalleryThumbnailListeners(thumbnail, i) {
 
 // GALLERY - THUMBNAIL - ATTRIBUTES - ADD
 function setGalleryThumbnailDefaultAttributes(thumbnail, id, title, src) {
-  thumbnail.id = id; // Thumbnail - Key
-  thumbnail.className = "gallery-thumbnail"; // Thumbnail - Class
-  thumbnail.style.height =  "130px"; // Thumbnail - Height
-  thumbnail.setAttribute("alt", title); // Thumbnail - Title
-  thumbnail.dataset.src = src; // Thumbnail - Data-Src
+  thumbnail.id = id; // Key
+  thumbnail.className = "gallery-thumbnail";
+  thumbnail.style.height =  "130px";
+  thumbnail.setAttribute("alt", title);
+  thumbnail.dataset.src = src; // Placeholder => Image
 
   return thumbnail;
+}
+
+// GALLERY - THUMBNAIL - LOAD
+function lazyLoadGalleryThumbnail(thumbnail) {
+  [].forEach.call(document.querySelectorAll("img[data-src]"), function(thumbnail) {
+    thumbnail.setAttribute("src", thumbnail.getAttribute("data-src"));
+    thumbnail.onload = function() {
+      thumbnail.removeAttribute("data-src");
+    };
+  });
 }

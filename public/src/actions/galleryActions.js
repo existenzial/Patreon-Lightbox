@@ -1,14 +1,6 @@
+/* GALLERY - ACTIONS */
+
 // LIGHTBOX MODAL - OPEN
 function openLightbox() {
   document.getElementById('lightbox').style.display = "block";
-}
-
-// GALLERY - LOAD IMAGE
-function lazyLoadGalleryImage(img) {
-  [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-    img.setAttribute('src', img.getAttribute('data-src'));
-    img.onload = function() {
-      img.removeAttribute('data-src');
-    };
-  });
 }

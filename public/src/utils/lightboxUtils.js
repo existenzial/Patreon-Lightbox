@@ -3,7 +3,7 @@
 // LIGHTBOX - SLIDE - CREATE
 function createLightboxSlide(i) {
   var slide = document.createElement("div");
-      slide.id = (i + 1); //"slide" +
+      slide.id = "Slide-" + (i + 1);
       slide.className = "slide";
   return slide;
 }
@@ -25,3 +25,10 @@ function createLightboxSlideImage(image) {
       slideImage.setAttribute("alt", image.title);
   return slideImage;
 }
+
+// LIGHTBOX - PREV / NEXT - EVENT LISTENERS - ADD
+var previous = document.getElementById("lightbox-previous");
+    previous.addEventListener("click", slideshowPrevious, false);
+var next = document.getElementById("lightbox-next");
+    next.addEventListener("click", slideshowNext, false);
+    
