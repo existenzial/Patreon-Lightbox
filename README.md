@@ -1,8 +1,8 @@
 # Patreon Lightbox
-![CatDog](public/patreon_logo.png)
-
 [![Code Climate](https://codeclimate.com/repos/5864295b7121ca00540011c2/badges/f7bc9916808b386fe34f/gpa.svg)](https://codeclimate.com/repos/5864295b7121ca00540011c2/feed)
 [![Issue Count](https://codeclimate.com/repos/5864295b7121ca00540011c2/badges/f7bc9916808b386fe34f/issue_count.svg)](https://codeclimate.com/repos/5864295b7121ca00540011c2/feed)
+![CatDog](public/patreon_logo.png)
+
 
 * [Dependencies](#dependencies)
 
