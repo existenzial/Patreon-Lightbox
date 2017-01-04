@@ -10,17 +10,13 @@
 
 * [Deployment](#deployment)
 
+* [Issues](#issues)
+
 ## <a name="dependencies"></a> Dependencies
 
 * ```npm "pushstate-server"```
 
 * ```npm "isomorphic-fetch"```
-
-## <a name="issues"></a> Issues
-
-At Patreon we value your feedback, so please [submit any issues here](https://github.com/existenzial/patreon-lightbox/issues).
-
-
 
 ## <a name="installation"></a> Installing Patreon-Lightbox
 To **install** the app:
@@ -46,3 +42,6 @@ npm run dev
 # Navigate to:
 http://localhost:3000/
 ```
+
+## <a name="issues"></a> Issues
+At Patreon we value your feedback, so please [submit any issues here](https://github.com/existenzial/patreon-lightbox/issues).
