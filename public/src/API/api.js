@@ -28,9 +28,11 @@ function getFlickrImages(searchTerm) {
       });
 
       // Image - Collection - Iteration
+      var slideIdx = 1;
       for (let i = 0; i < images.length; i++) {
         var image = images[i];
-        var slideIdx = (i + 1);
+
+        slideIdx = (i + 1);
 
         // API Success - Set Gallery
         var galleryInner = gallery.galleryInnerWrapper; //div
@@ -39,7 +41,6 @@ function getFlickrImages(searchTerm) {
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
             lazyLoadGalleryImage(galleryImage);
-            addGalleryThumbnailListeners(galleryImage, slideIdx);
 
         var galleryListItem = createGalleryThumbnailListItem();
 
@@ -49,17 +50,18 @@ function getFlickrImages(searchTerm) {
 
         // API Success - Set Lightbox Slide
         var lightboxContent = document.getElementById("lightbox-content");
+        var slideContainer = document.getElementById("slide-container");
         var slide = createLightboxSlide(i);
         var slideTitle = createLightboxSlideTitle(image);
         var slideImage = createLightboxSlideImage(image);
+        addGalleryThumbnailListeners(galleryImage, slideIdx);
 
         slide.appendChild(slideTitle);
         slide.appendChild(slideImage);
 
-        lightboxContent.appendChild(slide);
+        slideContainer.appendChild(slide);
+        lightboxContent.appendChild(slideContainer);
       }
-      // LIGHTBOX - SET INITIAL STATE - CURRENT SLIDE w/FIRST SLIDE
-      showLightboxSlides(1);
 
       return images; // Image - Collection
     }).catch( err => {
