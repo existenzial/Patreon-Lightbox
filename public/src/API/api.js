@@ -28,11 +28,10 @@ function getFlickrImages(searchTerm) {
       });
 
       // Image - Collection - Iteration
-      var slideIdx = 1;
       for (let i = 0; i < images.length; i++) {
         var image = images[i];
 
-        slideIdx = (i + 1);
+        slideIndex = (i + 1); // Set - Initial Slide Index
 
         // API Success - Set Gallery
         var galleryInner = gallery.galleryInnerWrapper; //div
@@ -41,7 +40,7 @@ function getFlickrImages(searchTerm) {
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
             lazyLoadGalleryThumbnail(galleryImage);
-            addGalleryThumbnailListeners(galleryImage, slideIdx);
+            addGalleryThumbnailListeners(galleryImage, slideIndex);
 
         var galleryListItem = createGalleryThumbnailListItem();
 
