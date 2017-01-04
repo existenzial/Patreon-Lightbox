@@ -1,5 +1,4 @@
 /* GALLERY - DOM UTILS */
-var galleryThumbnails = document.getElementsByClassName("gallery-thumbnail");
 
 // GALLERY - THUMBNAIL - CREATE
 function createGalleryThumbnailImage() {
@@ -17,18 +16,18 @@ function createGalleryThumbnailListItem() {
 }
 
 // GALLERY - THUMBNAIL - EVENT LISTENERS - ADD
-function addGalleryThumbnailListeners(image, i) {
-  image.addEventListener("click", openLightbox, false);
-  image.addEventListener("click", function() { setCurrentSlide(i) });
+function addGalleryThumbnailListeners(thumbnail, i) {
+  thumbnail.addEventListener("click", openLightbox, false);
+  thumbnail.addEventListener("click", function() { setCurrentSlide(i) });
 }
 
 // GALLERY - THUMBNAIL - ATTRIBUTES - ADD
-function setGalleryThumbnailDefaultAttributes(image, id, title, src) {
-  image.id = id; // Thumbnail - Key
-  image.className = "gallery-thumbnail"; // Thumbnail - Class
-  image.style.height =  "130px"; // Thumbnail - Height
-  image.setAttribute("alt", title); // Thumbnail - Title
-  image.dataset.src = src; // Thumbnail - Data-Src
+function setGalleryThumbnailDefaultAttributes(thumbnail, id, title, src) {
+  thumbnail.id = id; // Thumbnail - Key
+  thumbnail.className = "gallery-thumbnail"; // Thumbnail - Class
+  thumbnail.style.height =  "130px"; // Thumbnail - Height
+  thumbnail.setAttribute("alt", title); // Thumbnail - Title
+  thumbnail.dataset.src = src; // Thumbnail - Data-Src
 
-  return image;
+  return thumbnail;
 }
