@@ -315,7 +315,7 @@ img[data-src] {
   .navbar {
     text-align: center;
     height: 75px;
-    line-height: 15px;
+    line-height: 17px;
     max-height: 15%;
   }
   #header-logo {
@@ -376,7 +376,6 @@ img[data-src] {
 @media screen and (min-width: 480px) and (max-width: 840px){
   /* Header */
   #header-logo {
-    margin-top: 5px;
     margin-left: 10px;
     width: 8%;
   }
