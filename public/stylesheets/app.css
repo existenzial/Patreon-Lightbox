@@ -340,8 +340,13 @@ img[data-src] {
     right: 4%;
   }
 
+  .slide-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .slide-position {
-    padding-right: 50px;
+    margin-right: 2%;
   }
 
   #lightbox-content {
