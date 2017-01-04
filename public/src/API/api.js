@@ -10,6 +10,10 @@ function getFlickrImages(searchTerm) {
       throw new Error("There was trouble retrieving data from Flickr:" + err);
     })
     .then( json => {
+      // Gallery - State - Reset
+      var thumbs = document.getElementById("gallery-thumbnails").children;
+      if (thumbs.length) { gallery.galleryStateReset() }
+
       // Image - Collection (from API)
       var images = json.photos.photo.map( function(farm, server, id, secret, title) {
         // Image - Model
@@ -23,15 +27,14 @@ function getFlickrImages(searchTerm) {
         return image; // Image - Model
       });
 
-      // Image - Collection iteration
+      // Image - Collection - Iteration
       for (let i = 0; i < images.length; i++) {
         var image = images[i];
         var slideIdx = (i + 1);
 
         // API Success - Set Gallery
-        var galleryInner = document.getElementById("gallery-inner"); //div
-        var galleryThumbnails = document.getElementById("gallery-thumbnails"); //ul
-            galleryThumbnails.className = "row";
+        var galleryInner = gallery.galleryInnerWrapper; //div
+        var galleryThumbnails = gallery.galleryThumbnails; //div
 
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
@@ -47,25 +50,16 @@ function getFlickrImages(searchTerm) {
         // API Success - Set Lightbox Slide
         var lightboxContent = document.getElementById("lightbox-content");
         var slide = createLightboxSlide(i);
-        var lightboxPosition = document.createElement("div");
-            lightboxPosition.id = i + 1;
-            lightboxPosition.className = "slide-position";
-            lightboxPosition.innerHTML = lightboxPosition.id + "&nbsp;/&nbsp;" + images.length;
-            lightboxPosition.style.color = "lightgrey";
-
         var slideTitle = createLightboxSlideTitle(image);
         var slideImage = createLightboxSlideImage(image);
 
-        slide.appendChild(slideImage);
         slide.appendChild(slideTitle);
-        slide.appendChild(lightboxPosition);
+        slide.appendChild(slideImage);
 
         lightboxContent.appendChild(slide);
-
       }
-      // SLIDESHOW - SET CURRENT SLIDE w/FIRST SLIDE
-      var slideIndex = 1;
-      showLightboxSlides(slideIndex);
+      // LIGHTBOX - SET INITIAL STATE - CURRENT SLIDE w/FIRST SLIDE
+      showLightboxSlides(1);
 
       return images; // Image - Collection
     }).catch( err => {
