@@ -40,7 +40,7 @@ function getFlickrImages(searchTerm) {
 
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
-            lazyLoadGalleryImage(galleryImage);
+            lazyLoadGalleryThumbnail(galleryImage);
             addGalleryThumbnailListeners(galleryImage, slideIdx);
 
         var galleryListItem = createGalleryThumbnailListItem();
@@ -56,7 +56,7 @@ function getFlickrImages(searchTerm) {
         var slideTitle = createLightboxSlideTitle(image);
         var slideImage = createLightboxSlideImage(image);
         var lightboxPosition = document.createElement("div");
-            lightboxPosition.id = i + 1;
+            lightboxPosition.id = (i + 1);
             lightboxPosition.className = "slide-position";
             lightboxPosition.innerHTML = lightboxPosition.id + "&nbsp;/&nbsp;" + images.length;
 
