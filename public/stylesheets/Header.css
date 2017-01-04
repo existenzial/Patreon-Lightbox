@@ -1,0 +1,43 @@
+/***** HEADER *****/
+
+/* All */
+.navbar {
+  top: 0;
+  position: absolute;
+
+  margin: 0;
+  padding: .5%;
+
+  width: 100%;
+  height: 10%;
+  min-height: 60px;
+  line-height: 80%;
+
+  color: white;
+  background: #444444;
+  border-bottom: 1px solid rgba(229,74,31,0.3);
+}
+
+/* Logo */
+#header-logo {
+  position: relative;
+  float: left;
+
+  padding-right: 1%;
+  padding-left: 1%;
+
+  width: 4%;
+  min-width: 40px;
+  max-width: 50px;
+}
+
+/* Title */
+#header-title {
+  margin-left: 150px;
+
+  -webkit-transform: translateX(-3%);
+  -moz-transform: translateX(-3%);
+  -ms-transform: translateX(-3%);
+  -o-transform: translateX(-3%);
+  transform: translateX(-3%);
+}

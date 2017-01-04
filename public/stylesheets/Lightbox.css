@@ -1,0 +1,121 @@
+/***** LIGHTBOX *****/
+
+/* All - Modal */
+.modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+
+  padding-top: 10%;
+
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+
+  transition: all .3s cubic-bezier(.10, .10, .25, .90);
+}
+
+#lightbox-content {
+  max-width: 100%;
+  max-height: 50%;
+}
+
+/* Slide */
+.slide-img {
+  display: block;
+  top: 50%;
+  left: 50%
+
+  max-width: 50%;
+  max-height: fit-content;
+}
+
+.slide-title {
+  display: block;
+  text-align: center;
+
+  padding: 1%;
+  margin-bottom: 1%;
+
+  color: lightgrey;
+}
+.slide-position {
+  display: block;
+  margin-left: 350px;
+
+  color: rgba(145,145,145,0.4);
+}
+
+/* Close */
+.close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+
+  font-size: 3em;
+  font-weight: bold;
+
+  color: #bbb;
+
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.close:hover {
+  cursor: pointer;
+
+  color: white;
+
+  opacity: 1;
+}
+
+/* Prev / Next */
+.previous,
+.next {
+  position: absolute;
+  top: 40%;
+
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+
+  cursor: pointer;
+
+  font-size: 3em;
+  font-weight: bold;
+
+  color: #444444;
+
+  transition: 0.4s ease;
+  opacity: 0.7;
+
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 20%;
+}
+.next:hover {
+  color: white;
+
+  opacity: 1;
+}
+
+.previous {
+  left: 20%;
+}
+.previous:hover {
+  color: white;
+
+  opacity: 1;
+}
