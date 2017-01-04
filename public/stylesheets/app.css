@@ -335,10 +335,15 @@ img[data-src] {
     max-width: 75%;
   }
 
+  /* LIGHTBOX */
   .close {
     right: 4%;
   }
-  /* LIGHTBOX */
+
+  .slide-position {
+    padding-right: 50px;
+  }
+
   #lightbox-content {
     margin-top: 20%;
   }
