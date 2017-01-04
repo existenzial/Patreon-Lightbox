@@ -5,7 +5,6 @@ function createLightboxSlide(i) {
   var slide = document.createElement("div");
       slide.id = (i + 1); //"slide" +
       slide.className = "slide";
-  console.log(i + " : Slide container div created!");
   return slide;
 }
 
@@ -14,7 +13,6 @@ function createLightboxSlideTitle(image) {
   var slideTitle = document.createElement("p");
       slideTitle.className = "slide-title";
       slideTitle.innerHTML = image.title;
-  console.log("Slide title created!");
   return slideTitle;
 }
 
@@ -25,6 +23,5 @@ function createLightboxSlideImage(image) {
       slideImage.className = "slide-image";
       slideImage.src = image.mediaUrl;
       slideImage.setAttribute("alt", image.title);
-  console.log("Slide image created!");
   return slideImage;
 }
