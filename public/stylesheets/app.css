@@ -3,6 +3,8 @@ body {
   margin: 0;
 
   font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Grid System */
@@ -40,8 +42,9 @@ h2 {
   min-height: 60px;
   line-height: 80%;
 
-  background: lightgray;
-  border-bottom: 1px solid #444444;
+  color: white;
+  background: #444444;
+  border-bottom: 1px solid rgba(229,74,31,0.3);
 }
 
 /* Logo */
@@ -59,7 +62,7 @@ h2 {
 
 /* Title */
 #header-title {
-  text-align: center;
+  margin-left: 150px;
 
   -webkit-transform: translateX(-3%);
   -moz-transform: translateX(-3%);
@@ -304,29 +307,32 @@ img[data-src] {
 /* Mobile - Small - 4 Column Layout */
 @media screen and (max-width: 480px){
   /* ALL */
-  h1 {
-    margin: 5%;
-    font-size: 2em;
-  }
   h2 {
     font-size: 1.5em;
   }
+
   /* HEADER */
   .navbar {
     text-align: center;
     height: 75px;
-    line-height: 17px;
+    line-height: 60px;
     max-height: 15%;
+  }
+  #header-title {
+    margin: 1%;
+    font-size: 2em;
   }
   #header-logo {
     margin-top: 5px;
     margin-left: 10px;
     max-width: 8%;
   }
+
   /* GALLERY */
   #gallery-thumbnails.row {
     padding-bottom: 20%;
   }
+
   /* SEARCH */
   #search-term {
     margin-bottom: 2.5%;
@@ -342,12 +348,10 @@ img[data-src] {
   .close {
     right: 4%;
   }
-
   .slide-image {
     width: 100%;
     max-width: 100%;
   }
-
   .slide-position {
     margin-left: -300px;
     margin-right: 2%;
@@ -356,16 +360,15 @@ img[data-src] {
   #lightbox-content {
     margin-top: 20%;
   }
-
   #lightbox-previous {
     top: 57%;
     left: 5%;
   }
-
   #lightbox-next {
     top: 57%;
     right: 5%;
   }
+
   /* FOOTER */
   .footer {
     padding: 3%;
@@ -376,18 +379,22 @@ img[data-src] {
 @media screen and (min-width: 480px) and (max-width: 840px){
   /* Header */
   #header-logo {
+    float: left;
+
+    margin-top: 7px;
     margin-left: 10px;
+    margin-right: 50px;
     width: 8%;
   }
   /* GALLERY */
   #gallery-thumbnails.row {
     padding-bottom: 20%;
   }
+  
   /* LIGHTBOX */
   #lightbox-previous {
     top: 70%;
   }
-
   #lightbox-next {
     top: 70%;
   }
