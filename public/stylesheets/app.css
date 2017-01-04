@@ -204,6 +204,12 @@ img[data-src] {
 
   color: lightgrey;
 }
+.slide-position {
+  display: block;
+  margin-left: 350px;
+
+  color: rgba(145,145,145,0.4);
+}
 
 /* Close */
 .close {
