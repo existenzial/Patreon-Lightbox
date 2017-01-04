@@ -90,6 +90,7 @@ h2 {
   padding: .3%;
   border: 2.5px dotted lightgrey;
   border-radius: 20px;
+  outline:none;
 
   opacity: .5;
   /* transition: opacity .75s cubic-bezier(.10, .10, .25, .90); */
