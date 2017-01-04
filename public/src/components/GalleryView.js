@@ -17,7 +17,9 @@ Gallery.prototype.setGalleryState = function(searchTerm) {
 
 Gallery.prototype.galleryStateReset = function() {
   var galleryThumbnails = this.galleryThumbnails; //ul - THUMBNAILS
-  galleryThumbnails.innerHTML = ""; // ul.children.length = 0
+      galleryThumbnails.innerHTML = ""; //ul.children.length = 0
+  var slideContainer = document.getElementById("slide-container");
+      slideContainer.innerHTML = ""; //div.children.length = 0
 }
 
 // Gallery - Set Initial State
