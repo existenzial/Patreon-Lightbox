@@ -25,12 +25,12 @@ function slideshowNext() {
   showLightboxSlides(slideIndex++);
 }
 
-// SLIDESHOW - SET CURRENT SLIDE
+// LIGHTBOX - SET CURRENT SLIDE
 function setCurrentSlide(idx) {
   showLightboxSlides(slideIndex = idx);
 }
 
-// SLIDESHOW - SHOW SLIDES
+// LIGHTBOX - SHOW SLIDES
 function showLightboxSlides(idx) {
   var i;
   var slides = document.getElementsByClassName("slide");
@@ -39,9 +39,9 @@ function showLightboxSlides(idx) {
   // if (slides.length) { console.log("You have slides!"); }
   // else { console.log("No slides for you!"); }
 
-  // slideshow end - go back to the beginning
+  // slideshow end - go back to first slide
   if (idx > slides.length) { slideIndex = 1; }
-  // slideshow err - go to end
+  // slideshow previous err - go to last slide
   if (idx < 1) { slideIndex = slides.length; }
 
   // iterate through slides & set display to none
