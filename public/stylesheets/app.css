@@ -95,8 +95,12 @@ h2 {
   /* transition: opacity .75s cubic-bezier(.10, .10, .25, .90); */
 }
 #search-term:hover {
-  border: 2.5px solid lightblue;
+  border: 2.5px solid rgba(229,74,31,0.5);
   opacity: .8;
+}
+#search-term:focus {
+  border: 2.5px solid rgba(229,74,31,0.8);
+  opacity: 1;
 }
 
 /***** GALLERY *****/
