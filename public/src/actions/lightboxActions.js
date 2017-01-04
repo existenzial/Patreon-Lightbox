@@ -32,15 +32,19 @@ function showLightboxSlides(idx) {
   var slides = document.getElementsByClassName("slide");
 
   // slideshow end - go back to first slide
-  if (idx > slides.length) { slideIndex = 1; }
+  if (idx > slides.length) {
+    slideIndex = 1;
+  }
   // slideshow previous err - go to last slide
-  if (idx < 1) { slideIndex = slides.length; }
+  if (idx < 1) {
+    slideIndex = slides.length;
+  }
 
   // iterate through slides & set display to none
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  
+
   if (slides.length) {
     slides[slideIndex - 1].style.display = "block";
   }
