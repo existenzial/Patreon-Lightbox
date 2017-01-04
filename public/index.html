@@ -55,18 +55,14 @@
     <!-- Lightbox MODAL - END -->
 
     <!-- Search -->
-    <div id="search-container" class="search row">
-      <form id="search" action="POST">
-        <input id="search-term" type="text" name="search-term" placeholder="Search...">
-      </form>
-    </div>
+    <div id="search-container" class="search row"></div>
 
     <!-- Gallery: Outer - START -->
     <div id="gallery-outer">
       <!-- Gallery: Inner - START -->
       <div id="gallery-inner" class="gallery">
         <h2 id="gallery-title" class="row">Image Gallery</h2>
-        <div id="gallery-thumbnail-container" class="row"></div>
+        <ul id="gallery-thumbnails" class="row"></ul>
       </div>
       <!-- Gallery: Inner - END -->
     </div>
@@ -80,6 +76,12 @@
     <script src="src/models/Image.js"></script>
     <!-- APIs -->
     <script src="src/API/api.js"></script>
+    <!-- Components: Common -->
+    <script src="src/common/Header.js"></script>
+    <script src="src/common/Search.js"></script>
+    <script src="src/common/Footer.js"></script>
+    <!-- Components: Views -->
+    <script src="src/components/GalleryView.js"></script>
     <!-- Actions -->
     <script src="src/actions/lightboxActions.js"></script>
     <script src="src/actions/galleryActions.js"></script>
@@ -87,11 +89,5 @@
     <!-- Utils -->
     <script src="src/utils/galleryUtils.js"></script>
     <script src="src/utils/lightboxUtils.js"></script>
-    <!-- Components: Common -->
-    <script src="src/common/Header.js"></script>
-    <script src="src/common/Search.js"></script>
-    <script src="src/common/Footer.js"></script>
-    <!-- Components: Views -->
-    <script src="src/components/GalleryView.js"></script>
   </body>
 </html>
