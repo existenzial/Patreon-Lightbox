@@ -255,7 +255,7 @@ h2 {
   text-align: center;
 }
 
-li.gallery-item {
+.gallery-item {
   display: inline;
 
   list-style: none;
@@ -379,7 +379,7 @@ img[data-src] {
 
 /* Mobile - Medium - 8 Column Layout */
 @media screen and (min-width: 480px) and (max-width: 840px){
-  /* Header */
+  /* HEADER */
   #header-logo {
     float: left;
 
@@ -404,7 +404,7 @@ img[data-src] {
 
 /* Mobile - Large - 12 Column Layout */
 @media screen and (min-width: 840px){
-  /* Header */
+  /* HEADER */
   #header-logo {
     margin-top: 5px;
     margin-left: 10px;

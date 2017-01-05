@@ -13,28 +13,28 @@ var lightboxClose = document.getElementById("lightbox-close");
 var slideIndex = 1;
 
 // LIGHTBOX - SET - DEFAULT DISPLAY
-showLightboxSlides(slideIndex);
+showCurrentSlide(slideIndex);
 
 // LIGHTBOX - SLIDE PREVIOUS - ACTION
 function slideshowPrevious(idx) {
   slideIndex -= idx;
-  showLightboxSlides(slideIndex);
+  showCurrentSlide(slideIndex);
 }
 
 // LIGHTBOX - SLIDE NEXT - ACTION
 function slideshowNext(idx) {
   slideIndex += idx;
-  showLightboxSlides(slideIndex);
+  showCurrentSlide(slideIndex);
 }
 
 // LIGHTBOX - SET CURRENT SLIDE
 function setCurrentSlide(idx) {
   slideIndex = idx;
-  showLightboxSlides(slideIndex);
+  showCurrentSlide(slideIndex);
 }
 
 // LIGHTBOX - SHOW SLIDES
-function showLightboxSlides(idx) {
+function showCurrentSlide(idx) {
   var i;
   var slides = document.getElementsByClassName("slide");
 
@@ -52,6 +52,7 @@ function showLightboxSlides(idx) {
     slides[i].style.display = "none";
   }
 
+  // display current slide
   if (slides.length) {
     slides[slideIndex - 1].style.display = "block";
   }
