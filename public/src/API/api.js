@@ -38,7 +38,6 @@ function getFlickrImages(searchTerm) {
 
         var galleryImage = createGalleryThumbnailImage();
             setGalleryThumbnailDefaultAttributes(galleryImage, image.id, image.title, image.mediaUrl);
-            lazyLoadGalleryThumbnail(galleryImage);
             addGalleryThumbnailListeners(galleryImage, slideIndex);
 
         var galleryListItem = createGalleryThumbnailListItem();
@@ -46,6 +45,7 @@ function getFlickrImages(searchTerm) {
         galleryListItem.appendChild(galleryImage);
         galleryThumbnails.appendChild(galleryListItem);
         galleryInner.appendChild(galleryThumbnails);
+        lazyLoadGalleryThumbnail(galleryImage);
 
         // API Success - Set Lightbox Slide
         var lightboxContent = document.getElementById("lightbox-content");
