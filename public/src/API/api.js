@@ -31,8 +31,6 @@ function getFlickrImages(searchTerm) {
       for (let i = 0; i < images.length; i++) {
         var image = images[i];
 
-        slideIndex = (i + 1); // Set - Initial Slide Index
-
         // API Success - Set Gallery
         var galleryInner = gallery.galleryInnerWrapper; //div
         var galleryThumbnails = gallery.galleryThumbnails; //div
@@ -55,7 +53,7 @@ function getFlickrImages(searchTerm) {
         var slideTitle = createLightboxSlideTitle(image);
         var slideImage = createLightboxSlideImage(image);
         var lightboxPosition = document.createElement("div");
-            lightboxPosition.id = (i + 1);
+            lightboxPosition.id = slideIndex + i;
             lightboxPosition.className = "slide-position";
             lightboxPosition.innerHTML = lightboxPosition.id + "&nbsp;/&nbsp;" + images.length;
 

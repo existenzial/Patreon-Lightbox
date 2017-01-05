@@ -28,7 +28,10 @@ function createLightboxSlideImage(image) {
 
 // LIGHTBOX - PREV / NEXT - EVENT LISTENERS - ADD
 var previous = document.getElementById("lightbox-previous");
-    previous.addEventListener("click", slideshowPrevious, false);
+    previous.addEventListener("click", function() {
+       slideshowPrevious(1);
+     }, false);
 var next = document.getElementById("lightbox-next");
-    next.addEventListener("click", slideshowNext, false);
-    
+    next.addEventListener("click", function() {
+      slideshowNext(1);
+    }, false);

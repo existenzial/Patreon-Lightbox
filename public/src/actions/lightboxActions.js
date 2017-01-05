@@ -9,27 +9,34 @@ function closeLightbox() {
 var lightboxClose = document.getElementById("lightbox-close");
     lightboxClose.addEventListener("click", closeLightbox, false);
 
+// SLIDE - SET DEFAULT INDEX
 var slideIndex = 1;
 
+// LIGHTBOX - SET - DEFAULT DISPLAY
+showLightboxSlides(slideIndex);
+
 // LIGHTBOX - SLIDE PREVIOUS - ACTION
-function slideshowPrevious() {
-  showLightboxSlides(slideIndex--);
+function slideshowPrevious(idx) {
+  slideIndex -= idx;
+  showLightboxSlides(slideIndex);
 }
 
 // LIGHTBOX - SLIDE NEXT - ACTION
-function slideshowNext() {
-  showLightboxSlides(slideIndex++);
+function slideshowNext(idx) {
+  slideIndex += idx;
+  showLightboxSlides(slideIndex);
 }
 
 // LIGHTBOX - SET CURRENT SLIDE
 function setCurrentSlide(idx) {
-  showLightboxSlides(slideIndex = idx);
+  slideIndex = idx;
+  showLightboxSlides(slideIndex);
 }
 
 // LIGHTBOX - SHOW SLIDES
 function showLightboxSlides(idx) {
   var i;
-  var slides = document.getElementsByClassName("slide");
+  var slides = document.getElementsByClassName("slide"); //slide divs
 
   // slideshow end - go back to first slide
   if (idx > slides.length) {
