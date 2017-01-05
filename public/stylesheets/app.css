@@ -44,6 +44,7 @@ h2 {
 
   color: white;
   background: rgb(35,45,50);
+  border-bottom: 1px solid rgb(226,126,98);
   border-bottom: 1px solid rgba(229,74,31,0.3);
 }
 
@@ -100,10 +101,12 @@ h2 {
   transition: all .325s cubic-bezier(.10, .10, .25, .90);
 }
 #search-term:hover {
+  border: 2.5px solid rgb(233,133,106);
   border: 2.5px solid rgba(229,74,31,0.5);
   opacity: .8;
 }
 #search-term:focus {
+  border: 2.5px solid rgb(229,74,31);
   border: 2.5px solid rgba(229,74,31,0.8);
   opacity: 1;
 }
@@ -163,6 +166,7 @@ h2 {
   display: block;
   margin-left: 350px;
 
+  color: rgb(190,190,190);
   color: rgba(145,145,145,0.4);
 }
 
