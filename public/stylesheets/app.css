@@ -2,6 +2,8 @@
 body {
   margin: 0;
 
+  object-fit: contain;
+
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -137,12 +139,14 @@ h2 {
 }
 
 /* Slide */
+.slide {
+  object-fit: contain;
+}
 .slide-img {
   display: block;
   top: 50%;
   left: 50%
 
-  object-fit: cover;
   max-width: 50%;
   max-height: fit-content;
 }
