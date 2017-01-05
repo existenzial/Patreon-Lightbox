@@ -139,8 +139,9 @@ h2 {
 }
 
 /* Slide */
-.slide {
+.slide-container {
   object-fit: contain;
+  margin: -5%;
 }
 .slide-img {
   display: block;
