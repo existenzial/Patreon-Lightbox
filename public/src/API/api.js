@@ -17,13 +17,8 @@ function getFlickrImages(searchTerm) {
       // Image - Collection (from API)
       var images = json.photos.photo.map( function(farm, server, id, secret, title) {
         // Image - Model
-        var image = {
-          farm: farm.farm,
-          server: farm.server,
-          id: farm.id,
-          title: farm.title,
-          mediaUrl: "https://farm" + farm.farm + ".staticflickr.com/" + farm.server + "/" + farm.id + "_" + farm.secret + ".jpg"
-        };
+        var image = new Image(farm, server, id, secret, title);
+        
         return image; // Image - Model
       });
 
