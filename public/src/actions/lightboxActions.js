@@ -36,7 +36,7 @@ function setCurrentSlide(idx) {
 // LIGHTBOX - SHOW SLIDES
 function showLightboxSlides(idx) {
   var i;
-  var slides = document.getElementsByClassName("slide"); //slide divs
+  var slides = document.getElementsByClassName("slide");
 
   // slideshow end - go back to first slide
   if (idx > slides.length) {

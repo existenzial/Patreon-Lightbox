@@ -28,8 +28,9 @@ function getFlickrImages(searchTerm) {
       });
 
       // Image - Collection - Iteration
-      for (let i = 0; i < images.length; i++) {
+      for (var i = 0; i < images.length; i++) {
         var image = images[i];
+        slideIndex = (i + 1); // Reset - Initial Slide Index
 
         // API Success - Set Gallery
         var galleryInner = gallery.galleryInnerWrapper; //div
@@ -53,7 +54,7 @@ function getFlickrImages(searchTerm) {
         var slideTitle = createLightboxSlideTitle(image);
         var slideImage = createLightboxSlideImage(image);
         var lightboxPosition = document.createElement("div");
-            lightboxPosition.id = slideIndex + i;
+            lightboxPosition.id = slideIndex;
             lightboxPosition.className = "slide-position";
             lightboxPosition.innerHTML = lightboxPosition.id + "&nbsp;/&nbsp;" + images.length;
 

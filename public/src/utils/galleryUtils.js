@@ -18,7 +18,7 @@ function createGalleryThumbnailListItem() {
 // GALLERY - THUMBNAIL - EVENT LISTENERS - ADD
 function addGalleryThumbnailListeners(thumbnail, i) {
   thumbnail.addEventListener("click", openLightbox, false);
-  thumbnail.addEventListener("click", function() { setCurrentSlide(slideIndex) });
+  thumbnail.addEventListener("click", function() { setCurrentSlide(i) });
 }
 
 // GALLERY - THUMBNAIL - ATTRIBUTES - ADD
