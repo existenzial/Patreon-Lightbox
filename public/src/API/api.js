@@ -4,12 +4,12 @@ function getFlickrImages(searchTerm) {
   var FLICKR_API_ENDPOINT = "https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=" + searchTerm + "&text=" + searchTerm + "&api_key=" + FLICKR_API_KEY + "&safe_search=true&format=json&nojsoncallback=1&per_page=10";
 
   return fetch(FLICKR_API_ENDPOINT)
-    .then( response => {
+    .then( function(response) {
       return response.json();
     }).catch( err => {
       throw new Error("There was trouble retrieving data from Flickr:" + err);
     })
-    .then( json => {
+    .then( function(json) {
       // Gallery - State - Reset
       var thumbs = document.getElementById("gallery-thumbnails").children;
       if (thumbs.length) { gallery.galleryStateReset() }
@@ -18,7 +18,7 @@ function getFlickrImages(searchTerm) {
       var images = json.photos.photo.map( function(farm, server, id, secret, title) {
         // Image - Model
         var image = new Image(farm, server, id, secret, title);
-        
+
         return image; // Image - Model
       });
 
@@ -62,7 +62,7 @@ function getFlickrImages(searchTerm) {
       }
 
       return images; // Image - Collection
-    }).catch( err => {
+    }).catch( function(err) {
       throw new Error("There was trouble mapping the Flickr photo data:" + err);
     });
 }
