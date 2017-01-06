@@ -6,7 +6,7 @@ function getFlickrImages(searchTerm) {
   return fetch(FLICKR_API_ENDPOINT)
     .then( function(response) {
       return response.json();
-    }).catch( err => {
+    }).catch( function(err) {
       throw new Error("There was trouble retrieving data from Flickr:" + err);
     })
     .then( function(json) {
