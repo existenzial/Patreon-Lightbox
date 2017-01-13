@@ -31,11 +31,10 @@ function createLightboxSlideImage(image) {
 
 // LIGHTBOX - PREV / NEXT - EVENT LISTENERS - ADD
 /* KEYBOARD */
-var slide = document.getElementById("slide-container");
-    slide.addEventListener("keydown", function(e){
-      if (e.keyCode === 37) { slideshowPrevious(1) }
-      else if (e.keyCode === 39) { slideshowNext(1) }
-    }, false);
+document.addEventListener("keydown", function(e){
+    if (e.keyCode === 37) { slideshowPrevious(1) }
+    else if (e.keyCode === 39) { slideshowNext(1) }
+  }, false);
 
 /* MOUSE */
 var previous = document.getElementById("lightbox-previous");
