@@ -24,6 +24,6 @@ Gallery.prototype.galleryStateReset = function() {
 
 // Gallery - Set Initial State
 var gallery = new Gallery();
-gallery.setGalleryState("nature");
+gallery.setGalleryState(searchTerm); //API - "nature"
 
 console.log("Gallery View Loaded");
