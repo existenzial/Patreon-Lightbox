@@ -25,11 +25,19 @@ function createLightboxSlideImage(image) {
       slideImage.className = "slide-image";
       slideImage.src = image.mediaUrl;
       slideImage.setAttribute("alt", image.title);
-      
+
   return slideImage;
 }
 
 // LIGHTBOX - PREV / NEXT - EVENT LISTENERS - ADD
+/* KEYBOARD */
+var slide = document.getElementById("slide-container");
+    slide.addEventListener("keydown", function(e){
+      if (e.keyCode === 37) { slideshowPrevious(1) }
+      else if (e.keyCode === 39) { slideshowNext(1) }
+    }, false);
+
+/* MOUSE */
 var previous = document.getElementById("lightbox-previous");
     previous.addEventListener("click", function() {
        slideshowPrevious(1);
