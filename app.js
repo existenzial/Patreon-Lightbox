@@ -1,6 +1,8 @@
 var server = require('pushstate-server');
 
-server.start({
+var app = server.start({
   port: process.env.PORT || 3000,
   directory: './public'
 });
+
+module.exports = app;
