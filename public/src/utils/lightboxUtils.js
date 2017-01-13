@@ -32,7 +32,8 @@ function createLightboxSlideImage(image) {
 // LIGHTBOX - PREV / NEXT - EVENT LISTENERS - ADD
 /* KEYBOARD */
 document.addEventListener("keydown", function(e){
-    if (e.keyCode === 37) { slideshowPrevious(1) }
+    e.preventDefault();
+    if (e.keyCode === 37) { slideshowPrevious(1); }
     else if (e.keyCode === 39) { slideshowNext(1) }
   }, false);
 
