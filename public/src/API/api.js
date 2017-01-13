@@ -1,4 +1,5 @@
 var FLICKR_API_KEY = "bfdd8287d321ea98869bc753c1451a74";
+var searchTerm = 'nature';
 
 function getFlickrImages(searchTerm) {
   var FLICKR_API_ENDPOINT = "https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=" + searchTerm + "&text=" + searchTerm + "&api_key=" + FLICKR_API_KEY + "&safe_search=true&format=json&nojsoncallback=1&per_page=10";
@@ -66,3 +67,9 @@ function getFlickrImages(searchTerm) {
       throw new Error("There was trouble mapping the Flickr photo data:" + err);
     });
 }
+
+module.exports = {
+  FLICKR_API_KEY: FLICKR_API_KEY,
+  FLICKR_API_ENDPOINT: "/services/rest/?method=flickr.photos.search&tags=" + searchTerm + "&text=" + searchTerm + "&api_key=" + FLICKR_API_KEY + "&safe_search=true&format=json&nojsoncallback=1&per_page=10",
+  getFlickrImages: getFlickrImages
+};
